@@ -14,12 +14,12 @@
 var toolkit = require('toolkit');
 ```
 
-  Create array toolkit adding `[map](https://github.com/component/map)` and ``[to-object](https://github.com/component/to-object)` array components.
+  Create array toolkit adding [map](https://github.com/component/map) and [to-object](https://github.com/component/to-object) array components.
 ```js
 var array = toolkit(require, ['map', 'to-object']);
 ```
 
-  Also add `[select](https://github.com/component/select)` component using .add() method.
+  Also add [select](https://github.com/component/select) component using .add() method.
 ```js
 array.add('select');
 ```
