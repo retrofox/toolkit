@@ -7,6 +7,8 @@
 
     $ component install retrofox/toolkit
 
+## Example
+
 ```js
 var toolkit = require('toolkit');
 
