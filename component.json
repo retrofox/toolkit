@@ -1,6 +1,6 @@
 {
-  "name": "boxTool",
-  "repo": "retrofox/boxtool",
+  "name": "toolkit",
+  "repo": "retrofox/toolkit",
   "description": "Creats an object component container",
   "version": "0.0.1",
   "keywords": [],

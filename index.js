@@ -1,16 +1,16 @@
 
 /**
- * Expose `boxTool` component.
+ * Expose `toolkit` component.
  */
 
-module.exports = boxTool;
+module.exports = toolkit;
 
 /**
  * container
  */
 
-function boxTool() {
-  if (!(this instanceof boxTool)) return new boxTool;
+function toolkit() {
+  if (!(this instanceof toolkit)) return new toolkit;
   this.tool = {};
 
   return this;
@@ -22,7 +22,7 @@ function boxTool() {
  * @param {String} component component number
  */
 
-boxTool.prototype.add= function(cmp){
+toolkit.prototype.add= function(cmp){
   this.tool[cmp] = require(cmp);
   return this;
 };
