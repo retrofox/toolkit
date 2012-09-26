@@ -6,12 +6,23 @@
 module.exports = toolkit;
 
 /**
- * container
+ * Toolkit container
+ *
+ * @param {Function} require parent require function
+ * @param {Array} components components collections (optional)
+ * @api public
  */
 
-function toolkit() {
-  if (!(this instanceof toolkit)) return new toolkit;
+function toolkit(require, components) {
+  if (!(this instanceof toolkit)) return new toolkit(require, components);
+  this._require = require;
   this.tool = {};
+
+  if (components) {
+    for (var i = 0; i < components.length; i++) {
+      this.add(components[i]);
+    }
+  }
 
   return this;
 }
@@ -19,10 +30,12 @@ function toolkit() {
 /**
  * Add a component
  *
- * @param {String} component component number
+ * @param {String} component component name
+ * @api public
  */
 
 toolkit.prototype.add= function(cmp){
-  this.tool[cmp] = require(cmp);
+  if (this.tool[cmp]) return;
+  this.tool[cmp] = this._require(cmp);
   return this;
 };
